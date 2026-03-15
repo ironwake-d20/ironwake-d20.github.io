@@ -997,37 +997,34 @@
 <h2 id="the-school-sacrifice-ring-specialist-subclass">The school sacrifice ring (Specialist subclass)</h2>
 <p>The Specialist subclass organises the eight schools into a <strong>ring</strong>, with each school having a direct opposite across the ring. Sacrificing access to schools on either side of your chosen school unlocks deeper feature tiers within it.</p>
 <h3 id="ring-arrangement">Ring arrangement</h3>
+<pre class="mermaid"><code>graph LR
+    EVO("Evocation")
+    TRA("Transmutation")
+    CON("Conjuration")
+    ENC("Enchantment")
+    ILL("Illusion")
+    DIV("Divination")
+    NEC("Necromancy")
+    ABJ("Abjuration")
+
+    EVO --- TRA
+    TRA --- CON
+    CON --- ENC
+    ENC --- ILL
+    ILL --- DIV
+    DIV --- NEC
+    NEC --- ABJ
+    ABJ --- EVO
+
+    EVO -. "opposes" .- ILL
+    TRA -. "opposes" .- DIV
+    CON -. "opposes" .- NEC
+    ENC -. "opposes" .- ABJ</code></pre>
+<p>ring:</p>
 <div class="highlight"><pre><span></span><code>Evocation — Transmutation — Conjuration — Enchantment
     |                                           |
 Abjuration — Necromancy  — Divination  — Illusion
 </code></pre></div>
-<p>Opposition pairs (directly across the ring):</p>
-<table>
-<thead>
-<tr>
-<th>School</th>
-<th>Opposite</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Evocation</td>
-<td>Illusion</td>
-</tr>
-<tr>
-<td>Transmutation</td>
-<td>Divination</td>
-</tr>
-<tr>
-<td>Conjuration</td>
-<td>Necromancy</td>
-</tr>
-<tr>
-<td>Enchantment</td>
-<td>Abjuration</td>
-</tr>
-</tbody>
-</table>
 <h3 id="sacrifice-mechanics">Sacrifice mechanics</h3>
 <p>Sacrifices peel <strong>symmetrically outward</strong> from the chosen school in both directions simultaneously. You cannot sacrifice one neighbour without the other.</p>
 <p>Taking an Evocation specialist as an example:</p>
