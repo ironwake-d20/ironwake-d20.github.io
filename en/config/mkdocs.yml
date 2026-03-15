@@ -1,0 +1,132 @@
+site_name: Ironwake
+docs_dir: ../docs
+site_dir: ../site
+
+repo_name: ironwake
+repo_url: https://github.com/ironwake-d20/ironwake.github.io
+
+nav:
+  - Overview: index.md
+
+  - Introduction:
+      - introduction/index.md
+      - How to Play: introduction/how-to-play.md
+      - What Is a Character?: introduction/what-is-a-character.md
+
+  - Character Creation:
+      - character-creation/index.md
+      - Attributes: character-creation/attributes.md
+      - Lineages: character-creation/lineages.md
+      - Classes: character-creation/classes.md
+      - Skills: character-creation/skills.md
+      - Feats: character-creation/feats.md
+      - Starting Equipment: character-creation/starting-equipment.md
+
+  - Core Rules:
+      - core-rules/index.md
+      - Kai & Mana: core-rules/kai-and-mana.md
+      - Combat: core-rules/combat.md
+      - Magic: core-rules/magic.md
+      - Pacts: core-rules/pacts.md
+      - Progression: core-rules/progression.md
+
+  - Adventuring:
+      - adventuring/index.md
+      - Rest & Recovery: adventuring/rest-and-recovery.md
+      - Travel & Exploration: adventuring/travel-and-exploration.md
+      - Conditions: adventuring/conditions.md
+      - Downtime: adventuring/downtime.md
+
+  - Spells:
+      - spells/index.md
+      - Abjuration: spells/abjuration.md
+      - Conjuration: spells/conjuration.md
+      - Divination: spells/divination.md
+      - Enchantment: spells/enchantment.md
+      - Evocation: spells/evocation.md
+      - Illusion: spells/illusion.md
+      - Necromancy: spells/necromancy.md
+      - Transmutation: spells/transmutation.md
+
+  - Equipment:
+      - equipment/index.md
+      - Weapons: equipment/weapons.md
+      - Armour & Shields: equipment/armour-and-shields.md
+      - Adventuring Gear: equipment/adventuring-gear.md
+      - Imbued Artefacts: equipment/imbued-artefacts.md
+
+  - Setting:
+      - setting/index.md
+      - The World: setting/the-world.md
+      - The Church: setting/the-church.md
+      - Cosmology: setting/cosmology.md
+
+  - Appendices:
+      - appendices/index.md
+      - Glossary: appendices/glossary.md
+      - Quick Reference: appendices/quick-reference.md
+      - Character Sheet: appendices/character-sheet.md
+      - Character Generator: appendices/character-generator.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.details
+  - pymdownx.snippets
+
+theme:
+  name: material
+  # custom_dir: "../../overrides/"
+  language: en
+  # logo: assets/images/logo.jpg
+  # favicon: assets/images/favicon.ico
+
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - navigation.tracking
+    - search
+    - search.suggest
+    - search.share
+
+plugins:
+  - search:
+      lang: en
+
+extra:
+  alternate:
+    - name: 🇬🇧 English
+      link: /en/
+      lang: en
