@@ -1,0 +1,78 @@
+site_name: Ironwake
+docs_dir: ../docs
+site_dir: ../site
+
+repo_name: ironwake
+repo_url: https://github.com/ironwake-d20/ironwake.github.io
+
+nav:
+  - Overview: index.md
+  - Mechanics:
+      - Combat: mechanics/combat.md
+      - Kai & Mana: mechanics/kai-and-mana.md
+      - Magic: mechanics/magic.md
+      - Classes: mechanics/classes.md
+      - Pacts: mechanics/pacts.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.details
+  - pymdownx.snippets
+
+theme:
+  name: material
+  custom_dir: "../../overrides/"
+  language: en
+  # logo: assets/images/logo.jpg
+  # favicon: assets/images/favicon.ico
+
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - navigation.tracking
+    - search
+    - search.suggest
+    - search.share
+
+plugins:
+  - search:
+      lang: en
+
+extra:
+  alternate:
+    - name: 🇬🇧 English
+      link: /en/
+      lang: en
